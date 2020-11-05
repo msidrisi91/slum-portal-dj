@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Slum Portal</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="/stat/img/20002.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/stat/img/20002.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/stat/img/20002.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/stat/img/20002.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/stat/img/20002.png">
+    <link rel="stylesheet" href="/stat/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i">
+    <link rel="stylesheet" href="/stat/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/stat/css/-Login-form-Page-BS4-.css">
+    <link rel="stylesheet" href="/stat/css/Application-Form.css">
+    <link rel="stylesheet" href="/stat/css/Article-Dual-Column.css">
+    <link rel="stylesheet" href="/stat/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="/stat/css/Sakae-Contact-form-with-map.css">
+    <link rel="stylesheet" href="/stat/css/styles.css">
+    <link rel="stylesheet" href="/stat/css/Ultimate-Event-Calendar.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+        <div class="container"><a class="navbar-brand" href="#">Slum Portal</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.nhp.gov.in/miscellaneous/m-health" target="_blank">M-Health</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'map' is_auth %}">Slum Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'event' is_auth %}">Events</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">List of NGOs</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="https://ngodarpan.gov.in/index.php/home/statewise" target="_blank">State Wise</a><a class="dropdown-item" href="https://ngodarpan.gov.in/index.php/home/sectorwise" target="_blank">Sector Wise</a></div>
+                    </li>
+                    {% if is_auth == 0 %}
+                </ul><span class="navbar-text actions"> <a class="login" href="{% url 'log' %}">Log In</a><a class="btn btn-light action-button" role="button" href="{% url 'reg' %}">Register</a></span></div>
+                    {% elif is_auth == 1 %}
+                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="{% url 'pos' %}">Post Issue</a></span></div>
+                    {% endif %}
+        </div>
+    </nav>
+    <div class="article-dual-column">
+        <div class="container">
+            <div class="row" style="padding-bottom: 20px;">
+                <div class="col-md-10 offset-md-1" style="background: url(&quot;https://www.deccanherald.com/sites/dh/files/article_images/2020/05/26/dharavi%2010-361679873-1590450609.jpg&quot;) round;background-size: contain;">
+                    <div class="intro">
+                        <h1 class="text-center" style="padding-top: 0px;color: #000000;border-color: rgb(255,255,255);background: rgba(255,255,255,0.59);">You Make a Difference, We Make It Easier<br></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10 col-lg-3 offset-md-1" style="box-shadow: 0px 0px 2px;">
+                    <div class="toc">
+                        <p style="font-size: 26px;">Get Help</p>
+                    </div>
+                    <div><strong>Asha</strong>
+                        <p>Asha Community Health and Development Society,<br>Ekta Vihar, Sector 6, RK Puram,<br>New Delhi 110022, India<br><strong>Phone:</strong> +91-11-26716409<br><strong>Email:</strong> info@asha-india.org<br><strong>Website:&nbsp;</strong>asha-india.org</p>
+                    </div>
+                    <div><strong>The Path Maker</strong>
+                        <p>1093/A-103, ST.John,S Church Compound, Mehrauli, NEW DELHI-110030<br><strong>Phone:</strong> +91-11-64550044&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +91-9560093362<br><strong>Email:</strong>                            info@thepathmakers.org&nbsp;<br><strong>Website:</strong>&nbsp;thepathmakers.org<br></p>
+                    </div>
+                    <div><strong>Delhi Rural &amp; Slum Development Organisation<br></strong>
+                        <p>7/63, GF, Subhash Nagar, New Delhi-110027<br><strong>Phone:</strong>&nbsp;+91&nbsp;9811557555<br><strong>Email:</strong> sanjay@drsdo.org&nbsp;<br><strong>Website:</strong>&nbsp;www.drsdo.org<br></p>
+                    </div>
+                    <div><strong>Delhi Rural &amp; Slum Development Organisation<br></strong>
+                        <p>7/63, GF, Subhash Nagar, New Delhi-110027<br><strong>Phone:</strong>&nbsp;+91&nbsp;9811557555<br><strong>Email:</strong> sanjay@drsdo.org&nbsp;<br><strong>Website:</strong>&nbsp;www.drsdo.org<br></p>
+                    </div>
+                </div>
+                <div class="col-md-10 col-lg-7 offset-md-1 offset-lg-0">
+                    <h2 style="padding-top: 8px;">Current Issues</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Drainage Issue</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Posted By: Shaad</h6><img src="https://www.habitatforhumanity.org.uk/wp-content/uploads/2017/02/the-worlds-largest-slums--500x350-c-default.jpg" width="95%">
+                            <p class="card-text"><br>There is a drainage issue at&nbsp;Kusumpur Pahari Slum area.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Uncontrolled Covid-19 wave</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Posted By: Shaheem</h6><img src="https://m.hindustantimes.com/rf/image_size_444x250/HT/p2/2020/06/12/Pictures/corona_6e6c91ba-ac31-11ea-9025-3d4b53d18a13.jpg" width="95%">
+                            <p class="card-text"><br>An out of control covid-19 wave errupted at Dharavi slum area.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">School Infrastructure Required</h4>
+                            <h6 class="text-muted card-subtitle mb-2">Posted By: Shaad</h6>
+                            <div><img src="https://i2-prod.coventrytelegraph.net/incoming/article6780325.ece/ALTERNATES/s615/JS33313259-Mobile.jpg" width="95%"></div>
+                            <p class="card-text"><br>There is a requirement of benches and school infrastructure at&nbsp;Sultanpuri Slum area.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/stat/js/jquery.min.js"></script>
+    <script src="/stat/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/stat/js/bs-init.js"></script>
+    <script src="/stat/js/Application-Form-1.js"></script>
+    <script src="/stat/js/Application-Form.js"></script>
+    <script src="/stat/js/Ultimate-Event-Calendar.js"></script>
+</body>
+
+</html>

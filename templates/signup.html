@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Slum Portal</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="/stat/img/20002.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/stat/img/20002.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/stat/img/20002.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/stat/img/20002.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/stat/img/20002.png">
+    <link rel="stylesheet" href="/stat/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i">
+    <link rel="stylesheet" href="/stat/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="/stat/css/-Login-form-Page-BS4-.css">
+    <link rel="stylesheet" href="/stat/css/Application-Form.css">
+    <link rel="stylesheet" href="/stat/css/Article-Dual-Column.css">
+    <link rel="stylesheet" href="/stat/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="/stat/css/Sakae-Contact-form-with-map.css">
+    <link rel="stylesheet" href="/stat/css/styles.css">
+    <link rel="stylesheet" href="/stat/css/Ultimate-Event-Calendar.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+        <div class="container"><a class="navbar-brand" href="#">Slum Portal</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' 0 %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.nhp.gov.in/miscellaneous/m-health" target="_blank">M-Health</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'map' 0 %}">Slum Map</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'event' 0 %}">Events</a></li>
+                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">List of NGOs</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="https://ngodarpan.gov.in/index.php/home/statewise" target="_blank">State Wise</a><a class="dropdown-item" href="https://ngodarpan.gov.in/index.php/home/sectorwise" target="_blank">Sector Wise</a></div>
+                    </li>
+                </ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="{% url 'log' %}">Login</a></span></div>
+        </div>
+    </nav>
+    <section>
+        <h1 class="text-center text-capitalize">Application form</h1>
+        <div class="container">
+            <form id="application-form">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <p><strong>First Name</strong>&nbsp;<span class="text-danger">*</span></p><input class="form-control" type="text" required="" name="" placeholder="Ex. John"></div>
+                        <div class="col">
+                            <p><strong>Last Name</strong>&nbsp;<span class="text-danger">*</span></p><input class="form-control" type="text" required="" name="" placeholder="Ex. Smith"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <p><strong>Date Of Birth</strong>&nbsp;<span class="text-danger">*</span></p><input class="form-control" type="date" required="" name=""></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p><strong>Email&nbsp;</strong><span class="text-danger">*</span></p><input class="form-control" type="email" name="" placeholder="user@domain.com"></div>
+                <div class="form-group">
+                    <p><strong>Whatsapp&nbsp;Number&nbsp;</strong><span class="text-danger">*</span></p><input class="form-control" type="number" name="" placeholder="7777777777"></div>
+                <div class="form-group">
+                    <p><strong>Address&nbsp;</strong><span class="text-danger">*</span></p><input class="form-control" type="text" required="" name="" placeholder="Ex. Room No-361, 33/1, 3rd Floor">
+                    <p>Address Line 1<br></p><input class="form-control" type="text" required="" name="" placeholder="Ex. Marshal House, N S Road">
+                    <p>Address Line 2<br></p>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col"><input class="form-control" type="text" required="" name="" placeholder="Ex.   Kolkata">
+                            <p>City</p><input class="form-control" type="text" required="" name="" placeholder="Ex. 700001">
+                            <p>Pin Code</p>
+                        </div>
+                        <div class="col"><input class="form-control" type="text" required="" name="" placeholder="Ex.   West Bengal">
+                            <p>State</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <p><strong>Qualification&nbsp;</strong><span class="text-danger">*</span></p><textarea class="form-control" type="text" required="" placeholder="Ex.  2000 - 2004   Prague Engineer College ,etc" name="Qualification"></textarea></div>
+                        <div
+                            class="col">
+                            <p><strong>Experience&nbsp;</strong><span class="text-danger">*</span></p><input class="form-control" type="text" required="" name="" placeholder="Ex. Associate Software Engineer at Zendesk"></div>
+                    </div>
+                </div>
+        <div class="form-group">
+            <div class="form-row">
+                <div class="col">
+                    <p><strong>What motivated you to volunteer in this campaign?&nbsp;</strong><span class="text-danger">*</span></p><textarea class="form-control" type="text" required="" placeholder="Write Something....." name="Qualification"></textarea></div>
+            </div>
+        </div>
+        <div class="form-group"><p><strong>Your Picture </strong><span class="text-danger">*</span></p>
+        <div class="file">
+            <!-- Upload image input-->
+            <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm ">
+                <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+                <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+                <div class="input-group-append">
+                    <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+                </div>
+            </div>
+
+            <!-- Uploaded image area-->
+            <p class="font-italic text-dark text-center">The image uploaded will be rendered inside the box below.</p>
+            <div class="image-area mt-4 text-dark"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"  width=200></div>
+<div class="col d-none">
+    <p><strong>URL</strong><span class="text-danger">*</span></p>
+    <input id="urllink" name="url" type="url" class="form-control" readonly/>
+</div>
+</div></div>
+        <div class="form-group justify-content-center d-flex">
+            <div id="submit-btn">
+                <div class="form-row"><!-- <button class="btn btn-primary btn-light m-0 rounded-pill px-4" type="button" style="min-width: 500px;" action method="POST" target="hidden_iframe">Submit</button> -->
+                <a href="{% url 'review' %}" class="btn btn-primary btn-light m-0 rounded-pill px-4" style="min-width: 500px;">Submit</a></div>
+            </div>
+        </div>
+        </form>
+        </div>
+        <div class="col">
+            <h3 id="fail" class="text-center text-danger d-none"><br>Form not Submitted&nbsp;<a href="contact.html">Try Again</a><br><br></h3>
+            <h3 id="success-1" class="text-center text-success d-none"><br>Form Submitted Successfully&nbsp;<a href="contact.html">Send Another Response</a><br><br></h3>
+        </div>
+    </section>
+    <script src="/stat/js/jquery.min.js"></script>
+    <script src="/stat/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/stat/js/bs-init.js"></script>
+    <script src="/stat/js/Application-Form-1.js"></script>
+    <script src="/stat/js/Application-Form.js"></script>
+    <script src="/stat/js/Ultimate-Event-Calendar.js"></script>
+</body>
+
+</html>
